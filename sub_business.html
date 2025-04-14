@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Pretendard;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        padding-bottom: 4px;
+        font-size: 15px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vw;
+        max-width: 1904px;
+      }
+
+      .nav {
+        width: 1280px;
+        text-align: center;
+        margin: 0 auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      .nav > p {
+        text-align: center;
+        padding-top: 40px;
+        filter: invert(100);
+      }
+      .nav ul {
+        height: 90px;
+        font-size: 17px;
+        text-transform: uppercase;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 180px;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .con .photo > div {
+        position: relative;
+      }
+      .con .photo > div > p,
+      .con .photo > div > p > img {
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .con .photo > div > p:nth-child(2) img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+
+      .con {
+        text-align: center;
+        max-width: 1920px;
+        width: 100%;
+      }
+      .con .photo .logo,
+      .con .photo .logo p,
+      .con .photo .logo p img {
+        width: 100%;
+        overflow: hidden;
+      }
+      .con .photo {
+        padding: 0 8.3333333333%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        column-gap: 125px;
+        row-gap: 100px;
+        box-sizing: border-box;
+      }
+      .con h1 {
+        padding: 44px 40px;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 54px;
+      }
+      .con > P {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 60px;
+      }
+      .con .bt :first-child {
+        color: #000;
+      }
+      .con .bt {
+        display: flex;
+        justify-content: center;
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 0 40px 60px 40px;
+        gap: 36px;
+        color: #ccc;
+        font-weight: 700;
+      }
+      .con .photo .logo h3 {
+        margin-top: 24px;
+        font-size: 24px;
+      }
+      .con .photo .logo p {
+        font-size: 0;
+      }
+      .con .photo .logo span {
+        margin-top: 4px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="nav">
+        <p><img src="./img/logo.svg" alt="logo" /></p>
+        <ul>
+          <li>company</li>
+          <li>BUSINESS</li>
+          <li>investors</li>
+          <li>RESPONSIBILITY</li>
+          <li>people</li>
+          <li>news</li>
+        </ul>
+      </div>
+      <div class="con">
+        <h1>패션</h1>
+        <p>
+          신세계인터내셔날은 30년 역사를 지닌 한국 명품 시장의 개척자입니다.
+          럭셔리, 컨템포러리, 캐주얼, 액티브웨어 등<br />
+          다양한 글로벌 브랜드를 수입 및 유통하고, 경쟁력 있는 자체 패션
+          브랜드를 글로벌 브랜드로 육성하고 있습니다.
+        </p>
+        <div class="bt">
+          <p>전체</p>
+          <p>럭셔리</p>
+          <p>컨템포러리</p>
+          <p>캐주얼 & 액티브</p>
+          <p>자사 브랜드</p>
+        </div>
+        <div class="photo">
+          <div class="logo">
+            <div class="img">
+              <p><img src="./img/logo1_1.jpg" alt="" /></p>
+              <p><img src="./img/logo2_1.png" alt="" /></p>
+            </div>
+            <h3>GIORGIO ARMANI</h3>
+            <span>조르지오 아르마니</span>
+          </div>
+          <div class="logo">
+            <p><img src="./img/logo1_2.jpg" alt="" /></p>
+            <p><img src="./img/logo2_2.png" alt="" /></p>
+            <h3>BRUNELLO CUCINELLI</h3>
+            <span>브루넬로 쿠치넬리</span>
+          </div>
+          <div class="logo">
+            <p><img src="./img/logo1_3.jpeg" alt="" /></p>
+            <p><img src="./img/logo2_3.png" alt="" /></p>
+            <h3>ERDEM</h3>
+            <span>에르뎀</span>
+          </div>
+
+          <div class="logo">
+            <p><img src="./img/logo1_4.jpg" alt="" /></p>
+            <p><img src="./img/logo2_4.png" alt="" /></p>
+            <h3>GIORGIO ARMANI</h3>
+            <span>조르지오 아르마니</span>
+          </div>
+          <div class="logo">
+            <p><img src="./img/logo1_5.jpg" alt="" /></p>
+            <p><img src="./img/logo2_5.png" alt="" /></p>
+            <h3>BRUNELLO CUCINELLI</h3>
+            <span>브루넬로 쿠치넬리</span>
+          </div>
+          <div class="logo">
+            <p><img src="./img/logo1_6.jpg" alt="" /></p>
+            <p><img src="./img/logo2_6.png" alt="" /></p>
+            <h3>ERDEM</h3>
+            <span>에르뎀</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

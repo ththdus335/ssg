@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* https://www.sikorea.co.kr/main */
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      body {
+        font-family: Pretendard;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        padding-bottom: 4px;
+        font-size: 15px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vw;
+        max-width: 1904px;
+      }
+      .bg {
+        width: 100%;
+        height: 100vh;
+      }
+      .bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .nav {
+        position: absolute;
+        width: 1280px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .nav > p {
+        text-align: center;
+        padding-top: 40px;
+      }
+      .nav ul {
+        height: 90px;
+        color: #fff;
+        font-size: 17px;
+        text-transform: uppercase;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 180px;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .con2 .txt {
+        margin: 0 auto;
+        padding: 120px 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 32.04px;
+      }
+      .con2 .txt a {
+        margin-top: 40px;
+      }
+      .con2 .pic div,
+      .con2 .pic div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        transition: 1s;
+        filter: brightness(0.9);
+      }
+      .con2 .pic > .p01 img:hover,
+      .con2 .pic > .p04 img:hover,
+      .con2 .pic > .p05 img:hover,
+      .con2 .pic > .p06 img:hover,
+      .con2 .pic > .p10 img:hover {
+        overflow: hidden;
+        transform: scale(108%);
+      }
+      .con2 .pic > .p02 img:hover,
+      .con2 .pic > .p03 img:hover,
+      .con2 .pic > .p07 img:hover,
+      .con2 .pic > .p08 img:hover,
+      .con2 .pic > .p09 img:hover {
+        filter: brightness(0.6);
+      }
+      .con2 .pic {
+        cursor: pointer;
+        color: #fff;
+        padding: 0 52px;
+        margin: 0 auto;
+        display: grid;
+        grid-template: repeat(6, 300px);
+        grid-template-rows: repeat(4, 420px);
+        grid-template-areas:
+          "p01 p01 p02 p02 p02 p03"
+          "p01 p01 p05 p05 p06 p06"
+          "p04 p04 p05 p05 p07 p07"
+          "p08 p08 p08 p09 p10 p10";
+      }
+      .con2 .pic .p01 {
+        grid-area: p01;
+      }
+      .con2 .pic .p02 {
+        grid-area: p02;
+        position: relative;
+      }
+
+      .con2 .pic .p02 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+      }
+      .con2 .pic .p03 {
+        grid-area: p03;
+        position: relative;
+      }
+      .con2 .pic .p03 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+      }
+      .con2 .pic .p04 {
+        grid-area: p04;
+      }
+      .con2 .pic .p05 {
+        grid-area: p05;
+      }
+      .con2 .pic .p06 {
+        grid-area: p06;
+      }
+      .con2 .pic .p07 {
+        grid-area: p07;
+        position: relative;
+      }
+      .con2 .pic .p07 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+      }
+      .con2 .pic .p08 {
+        grid-area: p08;
+        position: relative;
+      }
+      .con2 .pic .p08 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+      }
+      .con2 .pic .p09 {
+        grid-area: p09;
+        position: relative;
+      }
+      .con2 .pic .p09 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        letter-spacing: 4px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .con2 .pic .p10 {
+        grid-area: p10;
+      }
+      .con3 {
+        margin-top: 74px;
+      }
+      .con3 p,
+      .con3 p img {
+        cursor: pointer;
+        font-size: 0;
+        width: 100%;
+        object-fit: cover;
+        transition: 1s;
+        overflow: hidden;
+      }
+      .con3 > p img:hover {
+        transform: scale(108%);
+      }
+      .con4 {
+        line-height: 42px;
+        display: flex;
+        text-align: left;
+      }
+      .con4 > div {
+        padding: 120px 75px;
+      }
+      .con4 > div > h1 {
+        font-size: 40px;
+        margin-bottom: 46px;
+        padding-bottom: 16px;
+      }
+      .con4 > div > div > h2 {
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .con4 > div > p,
+      .con4 > div > p > img {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+        overflow: hidden;
+      }
+      .con4 > div > p > img:hover {
+        transform: scale(108%);
+        overflow: hidden;
+      }
+      .con4 > div .s4_txt {
+        margin-top: 50px;
+      }
+      .con4 > div > p {
+        width: 800px;
+        height: 540px;
+      }
+      .con4 > div > div > p {
+        margin-bottom: 60px;
+        font-size: 18px;
+      }
+      .con4 .right {
+        background-color: #f6f4f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bg">
+        <video autoplay muted loop src="./img/25 SS_SI.mov"></video>
+      </div>
+      <div class="nav">
+        <p><img src="./img/logo.svg" alt="logo" /></p>
+        <ul>
+          <li>company</li>
+          <li>BUSINESS</li>
+          <li>investors</li>
+          <li>RESPONSIBILITY</li>
+          <li>people</li>
+          <li>news</li>
+        </ul>
+      </div>
+      <div class="con2">
+        <div class="txt">
+          <p>
+            신세계인터내셔날은 고객의 행복한 라이프 스타일을 디자인 하는
+            기업으로<br />
+            최고의 고객 경험과 가치를 전달하고자 끊임없이 노력하고 있습니다.<br />디지털,
+            상품, 고객 경험의 지속적인 혁신과 창조를 통해 글로벌 NO.1 기업으로
+            성장해 나가겠습니다.
+          </p>
+          <a href="#">READ MORE</a>
+        </div>
+
+        <div class="pic">
+          <div class="p01">
+            <img src="./img/p01.jpg" alt="" />
+          </div>
+          <div class="p02">
+            <img src="./img/p02.jpg" alt="" />
+            <p>FASHION</p>
+          </div>
+          <div class="p03">
+            <img src="./img/p03.jpg" alt="" />
+            <p>LIFESTYLE</p>
+          </div>
+          <div class="p04"><img src="./img/p04.jpg" alt="" /></div>
+          <div class="p05"><img src="./img/p05.jpg" alt="" /></div>
+          <div class="p06"><img src="./img/p06.jpg" alt="" /></div>
+          <div class="p07">
+            <img src="./img/p07.jpg" alt="" />
+            <p>BEAUTY</p>
+          </div>
+          <div class="p08">
+            <img src="./img/p08.jpg" alt="" />
+            <p>DIGITAL PLATFORM</p>
+          </div>
+          <div class="p09">
+            <img src="./img/p09.jpg" alt="" />
+            <p>LICENSE<br />BUSINESS</p>
+          </div>
+          <div class="p10"><img src="./img/p10.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="con3">
+        <p><img src="./img/s3_1.jpg" alt="" /></p>
+      </div>
+      <div class="con4">
+        <div class="left">
+          <h1>NEWS</h1>
+          <p><img src="./img/s4_1.jpg" alt="" /></p>
+          <div class="s4_txt">
+            <h2>[보브] 장 미쉘 바스키아의 영감을 받은 두 번째 컬렉션 출시</h2>
+            <p>
+              ㈜신세계톰보이가 운영하는 여성복 브랜드 보브(VOV, Voice of
+              Voices)는 미국의 천재 예술가 ‘장 미쉘<br />
+              바스키아’에서 영감을 받은 새로운 컬렉션을 출시했다고 18일 밝혔다.
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+        </div>
+        <div class="right">
+          <h1>PEOPLE</h1>
+          <p><img src="./img/s4_2.jpg" alt="" /></p>
+          <div class="s4_txt">
+            <h2>
+              내부적인 단합은 무수한 브랜드와의 경쟁에서<br />흔들리지 않는 굳은
+              심지가 된다고 생각합니다.
+            </h2>
+            <p>
+              좋은 브랜드라는 타이틀 하나만으로 잠시 빛이 날 수는 있으나 오래
+              유지하는 일은 불가능합니다.
+            </p>
+            <a href="#">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
